@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#f5ede6"/>
+  <!-- Piring & Cangkir Kaca Latte -->
+  <ellipse cx="200" cy="235" rx="85" ry="14" fill="#d7ccc8"/>
+  <path d="M150,110 L165,225 Q165,232 200,232 Q235,232 235,225 L250,110 Z" fill="#ffffff" stroke="#8d6e63" stroke-width="3"/>
+  <!-- Layer Susu -->
+  <path d="M163,165 L165,225 Q165,232 200,232 Q235,232 235,225 L237,165 Z" fill="#fff9c4" opacity="0.8"/>
+  <!-- Layer Kopi Macchiato -->
+  <path d="M155,125 L163,165 L237,165 L245,125 Z" fill="#795548"/>
+  <!-- Foam Busa Putih -->
+  <ellipse cx="200" cy="115" rx="46" ry="12" fill="#ffffff"/>
+  <!-- Drizzle Saus Karamel -->
+  <path d="M175,115 Q190,110 200,115 Q215,120 225,114" fill="none" stroke="#d79a29" stroke-width="4" stroke-linecap="round"/>
+  <path d="M185,110 L215,120" stroke="#d79a29" stroke-width="3" stroke-linecap="round"/>
+  <!-- Kuping cangkir kaca -->
+  <path d="M245,130 C275,140 275,190 236,200" fill="none" stroke="#8d6e63" stroke-width="5" stroke-linecap="round"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#5d4037" text-anchor="middle">Caramel Macchiato</text>
+</svg>

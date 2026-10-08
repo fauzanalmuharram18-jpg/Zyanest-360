@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#f5ede6"/>
+  <!-- Iced Americano Cup transparan -->
+  <line x1="200" y1="45" x2="175" y2="135" stroke="#424242" stroke-width="7" stroke-linecap="round"/>
+  <path d="M150,90 L165,225 Q165,232 200,232 Q235,232 235,225 L250,90 Z" fill="#3e2723" opacity="0.85" stroke="#bcaaa4" stroke-width="3"/>
+  <!-- Es Batu melayang -->
+  <rect x="175" y="105" width="24" height="24" rx="4" fill="#ffffff" opacity="0.55" transform="rotate(15 187 117)"/>
+  <rect x="205" y="130" width="22" height="22" rx="4" fill="#ffffff" opacity="0.5" transform="rotate(-20 216 141)"/>
+  <rect x="180" y="165" width="22" height="22" rx="4" fill="#ffffff" opacity="0.45"/>
+  <!-- Tutup dome cup -->
+  <ellipse cx="200" cy="90" rx="52" ry="12" fill="#eeeeee" stroke="#9e9e9e" stroke-width="2"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#5d4037" text-anchor="middle">Iced Americano</text>
+</svg>

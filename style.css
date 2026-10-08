@@ -1,0 +1,353 @@
+/* =========================================================
+   STYLE.CSS - Zyanest 360 Coffee
+   Website Coffeeshop Sederhana (Tugas Teknik Informatika)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. RESET & BOX MODEL (*)
+   Gunakan box-sizing: border-box;
+   --------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pengaturan umum halaman bertema kopi hangat */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #3e2723;
+    background-color: #faf6f0;
+}
+
+/* Pembungkus halaman agar rapi di tengah */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Judul dan sub-judul bagian */
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #4a2c11;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #8d6e63;
+    margin-bottom: 35px;
+}
+
+/* ---------------------------------------------------------
+   2. NAVBAR (.navbar)
+   Gunakan display: flex; & justify-content: space-between;
+   --------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e2723; /* Cokelat tua khas kopi */
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #f5ede6;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d7ccc8;
+}
+
+/* Tombol Keranjang Pesanan */
+.cart-info {
+    background-color: #fdfbf7;
+    color: #3e2723;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.cart-info:hover {
+    background-color: #efebe9;
+    transform: scale(1.05);
+}
+
+/* ---------------------------------------------------------
+   3. HERO SECTION (.hero)
+   Gunakan position: relative; pada hero & position: absolute;
+   pada badge promo (top: 10px; right: 15px;).
+   --------------------------------------------------------- */
+.hero {
+    position: relative; /* Wajib sesuai instruksi tugas */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/coffe zyanest 360.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 85px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Badge Promo dengan position: absolute */
+.badge-promo {
+    position: absolute; /* Wajib sesuai instruksi tugas */
+    top: 10px;          /* Wajib sesuai instruksi tugas */
+    right: 15px;        /* Wajib sesuai instruksi tugas */
+    background-color: #d9534f; /* Warna merah promo */
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 16px;
+    color: #f7f7f7;
+    margin-bottom: 26px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Tombol Hero */
+.btn-primary {
+    background-color: #d4a373;
+    color: #2b170c;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5925e;
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------
+   4. GALLERY (.gallery)
+   Gunakan display: grid; & grid-template-columns: repeat(3, 1fr);
+   dengan gap: 15px;
+   --------------------------------------------------------- */
+.gallery-section {
+    padding: 55px 0;
+}
+
+.gallery {
+    display: grid;                               /* Wajib sesuai instruksi tugas */
+    grid-template-columns: repeat(3, 1fr);       /* Wajib sesuai instruksi tugas */
+    gap: 15px;                                   /* Wajib sesuai instruksi tugas */
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border: 1px solid #ebdccb;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(62, 39, 35, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f7ede2;
+    border-bottom: 1px solid #ebdccb;
+}
+
+.card-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #3e2723;
+}
+
+.card-body .harga {
+    color: #a0522d;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body .deskripsi {
+    font-size: 13px;
+    color: #795548;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+/* Tombol Pesan */
+.btn-beli {
+    background-color: #6f4e37;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-beli:hover {
+    background-color: #4e342e;
+}
+
+/* ================= 5. TENTANG KAMI ================= */
+.tentang-section {
+    background-color: #ffffff;
+    padding: 55px 0;
+    border-top: 1px solid #ebdccb;
+    border-bottom: 1px solid #ebdccb;
+}
+
+.tentang-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tentang-content p {
+    font-size: 15px;
+    color: #5d4037;
+    margin-bottom: 14px;
+}
+
+/* ================= 6. KONTAK ================= */
+.kontak-section {
+    padding: 55px 0;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kontak-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdccb;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.kontak-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #3e2723;
+}
+
+.kontak-card p {
+    font-size: 14px;
+    color: #6d4c41;
+}
+
+/* ================= 7. FOOTER ================= */
+.footer {
+    background-color: #2b170c;
+    color: #bcaaa4;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE LAYAR HP ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Di layar HP, gallery beralih ke 1 kolom agar rapi */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

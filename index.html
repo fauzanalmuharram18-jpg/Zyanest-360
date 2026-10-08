@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyanest 360 Coffee - Coffeeshop Mahasiswa</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= 1. NAVBAR (.navbar) ================= -->
+    <header class="navbar">
+        <div class="brand">
+            <img src="images/coffe zyanest 360.png" alt="Logo Zyanest 360" class="logo-img">
+            <h1 class="logo">Zyanest 360</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Menu Gallery</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+        <!-- Indikator Keranjang Pesanan -->
+        <div class="cart-info" onclick="lihatKeranjang()" title="Klik untuk melihat daftar pesanan">
+            <span>🛒 Pesanan: <strong id="cart-count">0</strong></span>
+        </div>
+    </header>
+
+    <!-- ================= 2. HERO SECTION (.hero) ================= -->
+    <section id="home" class="hero">
+        <!-- Badge Promo (position: absolute; top: 10px; right: 15px;) -->
+        <span class="badge-promo">🔥 Diskon Mahasiswa 20%</span>
+
+        <div class="hero-content">
+            <h2>Selamat Datang di Zyanest 360 Coffee</h2>
+            <p>Tempat ngopi dan nugas favorit mahasiswa. Nikmati racikan kopi terbaik dengan suasana santai, wi-fi kencang, dan harga yang ramah di kantong.</p>
+            <button id="btn-hero" class="btn-primary">Lihat Menu Kopi</button>
+        </div>
+    </section>
+
+    <!-- ================= 3. GALLERY SECTION (.gallery) ================= -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Gallery Menu Kopi</h2>
+            <p class="section-subtitle">Pilihan racikan kopi segar terbaik untuk menemani fokus dan harimu</p>
+
+            <!-- Grid Gallery dengan class .gallery -->
+            <div class="gallery">
+                <!-- Card 1: Americano -->
+                <div class="gallery-item">
+                    <img src="images/01_americano.png" alt="Americano">
+                    <div class="card-body">
+                        <h3>Americano</h3>
+                        <p class="harga">Rp 20.000</p>
+                        <p class="deskripsi">Espresso murni dengan air dingin segar, rasa kopi hitam tegas yang membangkitkan fokus.</p>
+                        <button class="btn-beli" onclick="beliProduk('Americano')">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Espresso -->
+                <div class="gallery-item">
+                    <img src="images/02_espresso.png" alt="Espresso">
+                    <div class="card-body">
+                        <h3>Espresso</h3>
+                        <p class="harga">Rp 18.000</p>
+                        <p class="deskripsi">Ekstrak biji kopi pilihan dengan crema tebal dan aroma pekat, suntikan energi saat nugas.</p>
+                        <button class="btn-beli" onclick="beliProduk('Espresso')">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cappuccino -->
+                <div class="gallery-item">
+                    <img src="images/03_cappuccino.png" alt="Cappuccino">
+                    <div class="card-body">
+                        <h3>Cappuccino</h3>
+                        <p class="harga">Rp 25.000</p>
+                        <p class="deskripsi">Perpaduan harmonis espresso, susu hangat yang lembut, dan lapisan busa susu yang tebal.</p>
+                        <button class="btn-beli" onclick="beliProduk('Cappuccino')">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Butterscotch Ice Coffee -->
+                <div class="gallery-item">
+                    <img src="images/04_butterscotch_ice_coffee.png" alt="Butterscotch Ice Coffee">
+                    <div class="card-body">
+                        <h3>Butterscotch Ice Coffee</h3>
+                        <p class="harga">Rp 28.000</p>
+                        <p class="deskripsi">Kopi susu dingin dengan sentuhan sirup butterscotch manis legit beraroma karamel mentega.</p>
+                        <button class="btn-beli" onclick="beliProduk('Butterscotch Ice Coffee')">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Vanilla Ice Coffee -->
+                <div class="gallery-item">
+                    <img src="images/05_vanilla_ice_coffee.png" alt="Vanilla Ice Coffee">
+                    <div class="card-body">
+                        <h3>Vanilla Ice Coffee</h3>
+                        <p class="harga">Rp 26.000</p>
+                        <p class="deskripsi">Kombinasi segar kopi susu dingin dengan rasa manis lembut vanilla yang menenangkan.</p>
+                        <button class="btn-beli" onclick="beliProduk('Vanilla Ice Coffee')">Pesan</button>
+                    </div>
+                </div>
+
+                <!-- Card 6: Salted Caramel Ice Coffee -->
+                <div class="gallery-item">
+                    <img src="images/06_salted_caramel_ice_coffee.png" alt="Salted Caramel Ice Coffee">
+                    <div class="card-body">
+                        <h3>Salted Caramel Ice Coffee</h3>
+                        <p class="harga">Rp 28.000</p>
+                        <p class="deskripsi">Sensasi unik manisnya karamel berpadu gurihnya garam laut dalam racikan es kopi susu.</p>
+                        <button class="btn-beli" onclick="beliProduk('Salted Caramel Ice Coffee')">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. TENTANG KAMI ================= -->
+    <section id="tentang" class="tentang-section">
+        <div class="container">
+            <h2 class="section-title">Tentang Zyanest 360 Coffee</h2>
+            <div class="tentang-content">
+                <p>
+                    <strong>Zyanest 360 Coffee</strong> adalah konsep coffeeshop sederhana yang dihadirkan sebagai ruang berkumpul, belajar, dan berdiskusi bagi mahasiswa Teknik Informatika serta para pecinta kopi.
+                </p>
+                <p>
+                    Website ini dibuat sebagai implementasi tugas pemrograman web dasar dengan memanfaatkan HTML semantik, CSS Flexbox & CSS Grid, serta interaktivitas JavaScript dasar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. KONTAK ================= -->
+    <section id="kontak" class="kontak-section">
+        <div class="container">
+            <h2 class="section-title">Kontak & Lokasi</h2>
+            <p class="section-subtitle">Kunjungi kedai kami atau pesan secara daring</p>
+            
+            <div class="kontak-grid">
+                <div class="kontak-card">
+                    <h3>📷 Instagram</h3>
+                    <p>@zyanest360.coffee</p>
+                </div>
+                <div class="kontak-card">
+                    <h3>💬 WhatsApp Order</h3>
+                    <p>+62 812-3456-7890</p>
+                </div>
+                <div class="kontak-card">
+                    <h3>📍 Lokasi Kedai</h3>
+                    <p>Jl. Kampus Informatika No. 360</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Zyanest 360 Coffee. Dibuat untuk tugas Teknik Informatika.</p>
+        </div>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
